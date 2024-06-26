@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                .navbar{
+            overflow: hidden;
+            background-color: dimgray;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+        .navbar a{
+            text-decoration: none;
+            float:left;
+            padding: 10px 8px;
+            color: black;
+            display:block;
+            text-align: center;
+        }
+        .navbar a:hover{
+            color:white;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+<div class="navbar">  
+    <a href="/index" >Contact Me</a>
+    <a href="/thank-you">List</a>
+
+</div>  
+    <h1>Shopping List:
+
+    </h1>
+
+    <ol>
+        <ol><b>Cloths</b>
+        <li>Trousers</li>
+        <li>shoes</li>
+        <li>Shirt</li>
+        </ol>
+        <br>
+        <br>
+
+        <ol><b>Grocery</b>
+            <li>
+                bread
+            </li>
+            <li>egg</li>
+            <li>jam</li>
+        </ol>
+    </ol>
+    <% if (list.length > 0){ %>
+        <% list.forEach(list=>{ %>
+            <ol><b class="title"><%= list.title %></b></ol>
+             <li class="snippet"><%= list.snippet %></li>
+       <% }) %>
+
+    <% } %>
+</body>
+</html>
